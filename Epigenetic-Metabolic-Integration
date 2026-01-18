@@ -1,0 +1,7 @@
+# Exporting the Top Hubs list to CSV
+top_hubs = pd.DataFrame({'Metabolite': [feature_names[i] for i in indices], 
+                         'Importance': importances[indices]})
+top_hubs.to_csv('results/top_metabolic_hubs.csv', index=False)
+
+# The plots were saved in previous steps using:
+# plt.savefig('results/pca_plot.png')
